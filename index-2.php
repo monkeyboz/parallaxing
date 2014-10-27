@@ -42,44 +42,40 @@
 			}
 			#services{
 				height: 900px; 
-				background: #888a85; 
+				background: #ababab; 
 				position: relative;
 				width: 100%;
-				z-index: 1;
+				z-index: 4;
+				top: 900px;
 			}
 			.clouds{
 				position: absolute;
 				z-index: 30;
-				top: -92px;
+				top: -700px;
 				width: 100%;
 			}
 			.clouds2, .clouds3, .clouds4, .clouds5, .clouds6{
 				position: absolute;
 			}
-			.clouds2{
-				top: -150px;
-				left: 800px;
-				z-index: 40;
-			}
 			.clouds3{
-				top: -150px;
-				left: 200px;
+				top: -50px;
+				right: 200px;
 				z-index: 140;
 			}
 			.clouds4{
-				top: -180px;
+				top: -100px;
 				left: 220px;
 				z-index: 310;
 			}
 			.clouds5{
 				top: -90px;
-				left: 707px;
+				right: 707px;
 				z-index: 100;
 			}
 			.clouds6{
 				top: -90px;
-				left: 20px;
-				z-index: 120;
+				right: 20px;
+				z-index: 20;
 			}
 			.main-text{
 				background: rgba(255,255,255,.9);
@@ -92,12 +88,13 @@
 			}
 			.logo{
 				left: 350px;
+				top: 100px;
 				position: absolute;
 				z-index: 10;
 			}
 			.foreground{
 				top: 300px;
-				left: 400px;
+				right: 400px;
 				width: 100px;
 				height: 100px;
 				position: absolute;
@@ -105,6 +102,7 @@
 			}
 			.mainground{
 				left: -300px;
+				top: 300px;
 				position: absolute;
 				z-index: 90;	
 			}
@@ -141,30 +139,8 @@
 				position: absolute;
 				z-index: 100;			
 			}
-			.skyscrapers{
-				bottom: -100px;
-				position: absolute;
-				left: -200px;
-				z-index: 100;
-				width: 120%;
-			}
-			.skyscrapers1{
-				bottom: -150px;
-				position: absolute;
-				left: -200px;
-				z-index: 150;
-				width: 120%;
-				opacity: .5;
-			}
-			.mouse{
-				background: url(http://static.micheljansen.org/uploads/mac-osx-arrow-cursor.png);
-				width: 100px;
-				height: 200px;
-				background-size: 50px 100px;
-				background-repeat: no-repeat;		
-			}
-			.mouse{
-				z-index: 100;
+			#mouse{
+				z-index: 1000000;
 				position: absolute;
 			}
 			.white-backgroud{
@@ -178,7 +154,16 @@
 			$(document).ready(function(){
 				$('#info').parallax();
 				$('#clouds').parallax();
-				
+				/*$('main').hover(function(){ 
+					$('main').css('cursor','none');
+					$('main').append('<div id="mouse">testing</div>');
+					$('main').mousemove(function(e){
+						$('#mouse').css('top',e.clientY).css('left',e.clientX);				
+					});
+				},
+				function(){ 
+					$('#mouse').remove(); 
+				});*/
 				var curr = null;
 				$('navigation a').click(function(){
 					if(curr != null){
@@ -198,63 +183,37 @@
 		<main>
 		<navigation>
 			<a href="#home">Home</a>
-			<a href="#services">Services</a>
 			<a href="#about">About</a>
+			<a href="#services">Services</a>
 			<a href="#contact">Contact</a>
 		</navigation>
 		<iframe height="1" frameborder="0" width="1" src="/http://www.youtube.com/embed/vSMeYe-sLhs?autoplay=1" allowfullscreen=""></iframe>			
 			<a name="home"></a>
 			<div id="info">
 				<div class="logo layer">
-					<img src="images/logo.svg" style="width: 700px; height: 500px;"/>
+					<img src="images/logo.png"/>
 				</div>
 				<div class="foreground layer">
-					
+					<img src="images/satellite.png"/>
 				</div>
 				<div class="mainground layer">
-					<div>
-						<img src="images/globe.svg" style="width: 2000px; height: 2000px;"/>
-					</div>
+					<img src="images/globe.png"/>
 				</div>
 				<div class="lightground layer">
-					<div>
-					</div>
+					<img src="images/lightground"/>
 				</div>
 				<div class="background layer">
+					<img src="images/starfield.jpg" width="100%" height="100%"/>
 				</div>
 			</div>
-			<a name="services"></a>
+			<a name="about"></a>
 			<div id="clouds">
-				<div style="position: absolute; z-index: 1000000; width: 1000px; height: 300px; background: #fff; border: 10px solid #545454; border-radius: 20px; padding: 10px; right: 30px; top: 20px; z-index: 100000">
-					<h1>Services</h1>
+				<div class="clouds layer">
+					<img src="images/cloud.png" width="100%" height="100%"/>
 				</div>
-				<div class="clouds layer looping">
-					<img src="images/clouds.svg" width="20%" height="20%"/>
-					<img src="images/clouds.svg" width="450px" height="250px"/>
-				</div>
-				<div class="clouds2 layer looping">
-					<img src="images/clouds.svg" width="275px" height="150px"/>
-				</div>
-				<div class="clouds3 layer looping">
-					<img src="images/clouds.svg" width="170px" height="110px"/>
-				</div>
-				<div class="clouds4 layer looping">
-					<img src="images/clouds.svg" width="150px" height="90px"/>
-				</div>
-				<div class="clouds5 layer looping">
-					<img src="images/clouds.svg" width="150px" height="90px"/>
-				</div>
-				<div class="clouds6 layer looping">
-					<img src="images/clouds.svg" width="300px" height="200px"/>
-				</div>
-				<div class="skyscrapers layer">
-					<img src="images/skyline.svg" width="100%"/>				
-				</div>
-				<div class="skyscrapers1 layer">
-					<img src="images/skyline-background.svg" width="100%"/>				
-				</div>
+				<div class="white-backgroud layer"></div>
 			</div>
-			<div id="services"><a name="about"></a></div>
+			<div id="services"><a name="services"></a></div>
 			<a name="contact"></a>
 			<div style="height: 900px; background: #efefef;"></div>
 		</main>

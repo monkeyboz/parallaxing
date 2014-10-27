@@ -1,5 +1,4 @@
 body{
-	background: url(http://wallpaper-download.net/wallpapers/random-wallpapers-clouds-background-wallpaper-34665.jpg);
 	margin: 0px;
 }
 article{
@@ -15,12 +14,9 @@ article{
     width: 0px;
     height: 0px;
 }
-.mainground{
-	z-index: 100;
-}
-.background{
-	z-index: 10;
-}
-.foreground{
-	z-index: 1000;
+navigation{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	z-index: 100000;
 }
