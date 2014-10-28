@@ -10,15 +10,14 @@ Current usages include, basic mouse movement parallaxing follow, custom mouse cu
 Usage is very basic. Include the file and create the parallax layers yourself. Make sure that your z-indexes are setup correctly so that the overlays match the correct z-index placement. From there add a layer class to your parallaxing layers.
 
 example:
-<pre>
-<code>
+```html
   <script src="js/script.js"></script>
   <script>
     $(document).ready(function(){
       $('#public').parallax();
     });
   </script>
-  
+
   <style>
     #public{
       position: relative;
@@ -58,5 +57,3 @@ example:
       <img src="images/clouds.png"/>
     </div>
   </div>
-</code>
-</pre>
