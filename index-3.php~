@@ -311,8 +311,8 @@
 		<script type="text/javascript">
 			$(window).load(function() {
 				$('#info').parallax();
-				$('#clouds').parallax({"disable":{"mouse":"true"}});
-				$('#about').parallax({"disable":{"mouse":"true"}});
+				$('#clouds').parallax({"disable":{"mouse":"false"}});
+				$('#about').parallax({"disable":{"mouse":"false"}});
 				
 				var curr = null;
 				$('navigation a').click(function(){

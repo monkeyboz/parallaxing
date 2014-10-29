@@ -1,14 +1,15 @@
 $(document).ready(function(){
-    $.fn.parallax = function(options={"disable":{"mouse":"true"}}){
-	    $(this).append('<div class="loading-screen"><div class="preloader"></div></div>');
+    $.fn.parallax = function(options){
+    	if(options == undefined) options = {"disable":{"mouse":"false"}};
+	//$(this).append('<div class="loading-screen"><div class="preloader"></div></div>');
     	    
-	    function loadScreen(test){
+	/*function loadScreen(test){
 	    	/*
 	         * These are the variables used to make sure that there are several options for keeping track of the loading of images.  
 	         * There will be an automated loading screen created later down the line, but as for right now there will only be 
 	         * the option to create your own loading screen.
 	         */
-	    	var images = new Array();
+	    	/*var images = new Array();
 	    	test.find('img').each(function(){
 	        	images.push($(this));
 	        });
@@ -29,10 +30,11 @@ $(document).ready(function(){
 	        }
 	    }
 	    
-	    loadScreen($(this));
+	loadScreen($(this));*/
+	
         var offsets = $(this).offset();
-		var mainholder = $(this);
-		var info = new Array();
+	var mainholder = $(this);
+	var info = new Array();
 		
 		/* --------------------------------------------------
 		 * Function that creates the structure used in the animation function required to create the level of detail
@@ -140,7 +142,7 @@ $(document).ready(function(){
 		 * scrolling options, please feel free to goolge javascript scroll.
 		 */
 		$(this).scrollCheck();
-		if(options.disable.mouse == "true"){
+		if(options.disable.mouse == "false"){
 	        	$(this).mousemove(function(e){
 	            		var offset = {'x':e.clientX,'y':e.clientY};
 	            		var xinfo = offset.x-(mainholder.width()/2);
