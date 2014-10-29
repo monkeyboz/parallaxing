@@ -164,7 +164,7 @@
 				background-repeat: no-repeat;		
 			}
 			.mouse{
-				z-index: 100;
+				z-index: 140;
 				position: absolute;
 			}
 			.white-backgroud{
@@ -172,6 +172,15 @@
 				width: 100%;
 				top: 290px;
 				z-index: 1;
+			}
+			navigation .selected{
+				border-left: 5px solid #000;
+				background: #fff;
+				color: #545454;
+			}
+			navigation .visited{
+				background: #ababab;
+				border-left: 5px solid #545454;
 			}
 		</style>
 		<script type="text/javascript">
@@ -182,25 +191,45 @@
 				var curr = null;
 				$('navigation a').click(function(){
 					if(curr != null){
-						curr.css('background','#ababab').css('color','#fff');
+						curr.removeClass('selected');
+						curr.addClass('visited');
 					}
 					var position = $('a[name="'+$(this).attr('href').replace('#','')+'"]');
 					curr = $(this);
 					$('main').stop();
-					$(this).css('background','#fff').css('color','#000');
+					$(this).addClass('selected');
+					$(this).removeClass('visited');
 					$('main').animate({scrollTop:$('a[name="'+$(this).attr('href').replace('#','')+'"]').offset().top + $('main').scrollTop()},2000);
 					return false;
 				});
 			});
 		</script>
+		<style>
+			.globe{
+				background: #fff;
+				padding: 10px;
+				margin-bottom: 10px;
+				width: 200px;
+				text-align: center;
+			}
+			.links{
+				padding: 10px;
+				width: 200px;
+			}
+		</style>
 	</head>
 	<body>
 		<main>
 		<navigation>
-			<a href="#home">Home</a>
-			<a href="#services">Services</a>
-			<a href="#about">About</a>
-			<a href="#contact">Contact</a>
+			<div class="globe">
+				
+			</div>
+			<div class="links">
+				<a href="#home">Home</a>
+				<a href="#services">Services</a>
+				<a href="#about">About</a>
+				<a href="#contact">Contact</a>
+			</div>
 		</navigation>
 		<iframe height="1" frameborder="0" width="1" src="/http://www.youtube.com/embed/vSMeYe-sLhs?autoplay=1" allowfullscreen=""></iframe>			
 			<a name="home"></a>
@@ -225,7 +254,7 @@
 			</div>
 			<a name="services"></a>
 			<div id="clouds">
-				<div style="position: absolute; z-index: 1000000; width: 1000px; height: 300px; background: #fff; border: 10px solid #545454; border-radius: 20px; padding: 10px; right: 30px; top: 20px; z-index: 100000">
+				<div style="position: absolute; z-index: 1000000; width: 1000px; height: 300px; background: #fff; border: 10px solid #545454; border-radius: 20px; padding: 10px; right: 30px; top: 20px; z-index: 130">
 					<h1>Services</h1>
 				</div>
 				<div class="clouds layer looping">
@@ -248,7 +277,7 @@
 					<img src="images/clouds.svg" width="300px" height="200px"/>
 				</div>
 				<div class="skyscrapers layer">
-					<img src="images/skyline.svg" width="100%"/>				
+					<img src="images/skyline.svg" width="100%"/>			
 				</div>
 				<div class="skyscrapers1 layer">
 					<img src="images/skyline-background.svg" width="100%"/>				

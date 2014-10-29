@@ -38,7 +38,15 @@
 				width: 100%;
 				z-index: 4;
 				height: 1000px;
-				top: 200px;
+				top: 90px;
+				background: #fffcfc;
+				background: -moz-linear-gradient(top, #fffcfc 0%, #2989d8 57%, #1e5799 100%);
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fffcfc), color-stop(57%,#2989d8), color-stop(100%,#1e5799));
+				background: -webkit-linear-gradient(top, #fffcfc 0%,#2989d8 57%,#1e5799 100%);
+				background: -o-linear-gradient(top, #fffcfc 0%,#2989d8 57%,#1e5799 100%);
+				background: -ms-linear-gradient(top, #fffcfc 0%,#2989d8 57%,#1e5799 100%);
+				background: linear-gradient(to bottom, #fffcfc 0%,#2989d8 57%,#1e5799 100%);
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fffcfc', endColorstr='#1e5799',GradientType=0 );
 			}
 			#services{
 				height: 900px; 
@@ -50,17 +58,25 @@
 			}
 			.clouds{
 				position: absolute;
-				z-index: 30;
-				top: -700px;
+				z-index: 100;
+				top: -750px;
 				width: 100%;
 			}
-			.clouds2, .clouds3, .clouds4, .clouds5, .clouds6{
-				position: absolute;
+			.cloud-backgroud{
+				background: #1e5799; /* Old browsers */
+				background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+				background: -webkit-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+				background: -o-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+				background: -ms-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* IE10+ */
+				background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* W3C */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
 			}
-			.clouds3{
-				top: -50px;
-				right: 200px;
-				z-index: 140;
+			.clouds2{
+				top: -375px;
+				left: 200x;
+				position: absolute;
+				z-index: 175;
 			}
 			.clouds4{
 				top: -100px;
@@ -87,7 +103,7 @@
 				padding: 10px;
 			}
 			.logo{
-				right: 350px;
+				left: 350px;
 				top: 100px;
 				position: absolute;
 				z-index: 10;
@@ -101,10 +117,12 @@
 				z-index: 300;
 			}
 			.mainground{
-				right: -300px;
-				top: 300px;
+				top: 500px;
 				position: absolute;
-				z-index: 90;	
+				z-index: 90;
+				left: 100px;
+				width: 1200px;
+				height: 1200px;
 			}
 			.lightground{
 				top: 300px;
@@ -122,9 +140,10 @@
 			}
 			.background{
 				width: 2000px;
-				height: 1000px;
+				height: 1530px;
 				position: absolute;
-				z-index: 3;	
+				z-index: 3;
+				background: #000 url(images/star_field.jpg);
 			}
 			.text-info{
 				color: #000;
@@ -144,26 +163,63 @@
 				position: absolute;
 			}
 			.white-backgroud{
+			
 				height: 290px;
 				width: 100%;
 				top: 290px;
 				z-index: 1;
 			}
+			.mouse{
+				background: url(images/cursor.png);
+				background-repeat: no-repeat;
+				background-size: 35px 50px;
+				width: 100px;
+				height: 200px;
+				z-index: 10000;
+				position: absolute;
+			}
+			.preloader{
+				width: 100%;
+				height: 20px;
+				background: #000;
+				float: right;
+				position: absolute;
+				top: 30px;
+				left: 30px;
+			}
+			.loading-screen{
+				width: 100%;
+				height: 100%;
+				z-index: 1000000;
+				position: absolute;
+				top: 0px;
+				left: 0px;
+			}
+			#wording{
+				width: 500px;
+				height: 700px;
+				position: absolute;
+				top: 30px;
+				left: 100px;
+				line-height: 30px;
+				font-size: 14px;
+				background: rgba(255,255,255,.3);
+				text-align: justify;
+				padding: 20px;
+			}
+			.click{
+				border-radius: 10px;
+				border: 2px solid #ababab;
+				background: #545454;
+				padding: 20px;
+				color: #fff;
+			}
 		</style>
 		<script type="text/javascript">
 			$(document).ready(function(){
 				$('#info').parallax();
-				$('#clouds').parallax();
-				/*$('main').hover(function(){ 
-					$('main').css('cursor','none');
-					$('main').append('<div id="mouse">testing</div>');
-					$('main').mousemove(function(e){
-						$('#mouse').css('top',e.clientY).css('left',e.clientX);				
-					});
-				},
-				function(){ 
-					$('#mouse').remove(); 
-				});*/
+				$('#clouds').parallax({"disable":{"mouse":"true"}});
+				
 				var curr = null;
 				$('navigation a').click(function(){
 					if(curr != null){
@@ -190,6 +246,7 @@
 		<iframe height="1" frameborder="0" width="1" src="/http://www.youtube.com/embed/vSMeYe-sLhs?autoplay=1" allowfullscreen=""></iframe>			
 			<a name="home"></a>
 			<div id="info">
+				<div class="testing"></div>
 				<div class="logo layer">
 					<img src="images/logo.png"/>
 				</div>
@@ -197,23 +254,47 @@
 					<img src="images/satellite.png"/>
 				</div>
 				<div class="mainground layer">
-					<img src="http://images4.wikia.nocookie.net/__cb20110906193156/halofanon/images/1/1e/Earth.png" />
+					<img src="images/globe_glow.png" width="100%" height="100%"/>
 				</div>
-				<div class="lightground layer">
-					<img src="images/lightground"/>
-				</div>
-				<div class="background layer">
-					<img src="http://upload.wikimedia.org/wikipedia/commons/2/2c/Milkyway-galaxy-sky-stars_-_West_Virginia_-_ForestWander.jpg" width="100%" height="100%"/>
-				</div>
+				<div class="background layer"></div>
 			</div>
 			<a name="about"></a>
 			<div id="clouds">
-				<div class="clouds layer">
-					<img src="images/cloud.png" width="100%" height="100%"/>
+				<div class="testing"></div>
+				<div class="clouds layer looping seamless">
+					<img src="images/clouds_layout.png" width="100%" height="600px"/>
 				</div>
-				<div class="white-backgroud layer"></div>
+				<div class="clouds2 layer looping seamless">
+					<img src="images/cloud_cover_remake.png"/>
+				</div>
+				<div class="sun layer">
+					<img src="http://synermaxx.com/wp-content/uploads/2013/09/0_sun.png"/>
+				</div>
+				<div class="clouds3 layer looping seamless">
+					<img src="images/cloud_layout.png"/>
+				</div>
+				<div id="wording" class="layer">
+					<h2>About Superior Global Marketing</h2>
+					<p>
+						Working with lorem ipsum is great fun and works well with ipsum plurus, but the 
+						plurus ipsum is lorem upso do to the lack of ipsum rumble. Working with lorem ipsum is great 
+						fun and works well with ipsum plurus, but the plurus ipsum is lorem upso do to the lack of 
+						ipsum rumble. Working with lorem ipsum is great fun and works well with ipsum plurus, but the 
+						plurus ipsum is lorem upso do to the lack of ipsum rumble. 
+					</p>
+					<p>
+						Working with lorem ipsum is great fun and works well with ipsum plurus, but the 
+						plurus ipsum is lorem upso do to the lack of ipsum rumble. Working with lorem ipsum is great 
+						fun and works well with ipsum plurus, but the plurus ipsum is lorem upso do to the lack of 
+						ipsum rumble.
+					</p>
+					<span class="click">CLICK</span>
+				</div>
+				<div class="cloud-backgroud layer"></div>
 			</div>
-			<div id="services"><a name="services"></a></div>
+			<div id="services">
+				<a name="services"></a>
+			</div>
 			<a name="contact"></a>
 			<div style="height: 900px; background: #efefef;"></div>
 		</main>
