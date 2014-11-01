@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+$(document).ready(function(){
     $.fn.parallax = function(options){
     	if(options == undefined) options = {"disable":{"mouse":"false"}};
 	//$(this).append('<div class="loading-screen"><div class="preloader"></div></div>');
