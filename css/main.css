@@ -1,0 +1,435 @@
+body{
+	margin: 0px;
+	font-family: arial;		
+}
+navigation{
+	position: fixed;
+	top: 0px;
+	right: 20px;
+	z-index: 3000;
+}
+navigation a{
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 10px;
+	text-align: left;
+	background: #000;
+	text-transform: uppercase;
+}
+h1{
+	margin: 0px;
+	margin-bottom: 10px;			
+}
+#info{
+	width: 100%;
+	height: 1500px;
+	position: relative;
+	z-index: 1;
+	top: 0px;
+}
+#clouds{
+	position: relative;
+	width: 100%;
+	z-index: 4;
+	height: 1000px;
+	top: 90px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #28a3d3 43%, #ffffff 84%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(43%,#28a3d3), color-stop(84%,#ffffff)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#28a3d3 43%,#ffffff 84%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#28a3d3 43%,#ffffff 84%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#28a3d3 43%,#ffffff 84%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#28a3d3 43%,#ffffff 84%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.clouds{
+	position: absolute;
+	z-index: 100;
+	top: -750px;
+	width: 100%;
+}
+.cloud-backgroud{
+	background: #1e5799; /* Old browsers */
+	background: -moz-linear-gradient(top, #1e5799 0%, #7db9e8 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #1e5799 0%,#7db9e8 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #1e5799 0%,#7db9e8 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+}
+.clouds2{
+	top: -375px;
+	left: 200x;
+	position: absolute;
+	z-index: 175;
+}
+.clouds3{
+	top: 175px;
+	left: 200x;
+	position: absolute;
+	z-index: 90;
+}
+.clouds4{
+	top: -100px;
+	left: 220px;
+	z-index: 310;
+}
+.clouds5{
+	top: -90px;
+	right: 707px;
+	z-index: 100;
+}
+.clouds6{
+	top: -90px;
+	right: 20px;
+	z-index: 20;
+}
+.clouds7{
+	top: -900px;
+	left: 20px;
+	z-index: 200;
+	position: absolute;
+	opacity: .3;
+}
+.water{
+	height: 398px; 
+	width: 100%; 
+	top: -1100px; 
+	position: absolute;
+	z-index: 60;
+}
+.main-text{
+	background: rgba(255,255,255,.9);
+	width: 300px;
+	height: 300px;
+	top: 100px;
+	right: 100px;
+	position: absolute;
+	padding: 10px;
+}
+.logo{
+	left: 350px;
+	top: 100px;
+	position: absolute;
+	z-index: 10;
+}
+.foreground{
+	top: 300px;
+	right: 400px;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 300;
+}
+.mainground{
+	top: 500px;
+	position: absolute;
+	z-index: 90;
+	left: 100px;
+	width: 1200px;
+	height: 1200px;
+}
+.lightground{
+	top: 300px;
+	right: -350px;
+	width: 2000px;
+	height: 1000px;
+	position: absolute;
+	z-index: 91;	
+}
+main{
+	overflow-x: hidden;
+	overflow-y: scroll;
+	width: 100%;
+	height: 100%;
+	background: #5e83fb;
+}
+.background{
+	width: 200%;
+	height: 1488px;
+	position: absolute;
+	z-index: 3;
+	left: -50%;
+	background: #000 url(../images/star_field.jpg);
+}
+.paradise{
+	width: 200%;
+	height: 508px;
+	position: absolute;
+	z-index: 3;
+	top: 10px;
+	overflow: hidden;
+}
+.text-info{
+	color: #000;
+}
+#end .background{
+	left: 300px;			
+}
+.highlight-background{
+	background: rgba(255,255,255,.8);
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: 100;			
+}
+#mouse{
+	z-index: 1000000;
+	position: absolute;
+}
+.white-backgroud{
+
+	height: 290px;
+	width: 100%;
+	top: 290px;
+	z-index: 1;
+}
+.mouse{
+	background: url(../images/cursor.png);
+	background-repeat: no-repeat;
+	background-size: 35px 50px;
+	width: 100px;
+	height: 200px;
+	z-index: 10000;
+	position: absolute;
+}
+.preloader{
+	width: 100%;
+	height: 20px;
+	background: #000;
+	float: right;
+	position: absolute;
+	top: 30px;
+	left: 30px;
+}
+.loading-screen{
+	width: 100%;
+	height: 100%;
+	z-index: 1000000;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+#wording{
+	width: 500px;
+	height: 700px;
+	position: absolute;
+	top: -20px;
+	left: 100px;
+	line-height: 30px;
+	font-size: 14px;
+	background: rgba(255,255,255,.3);
+	text-align: justify;
+	padding: 20px;
+	z-index: 1000;
+}
+.click{
+	border-radius: 10px;
+	border: 2px solid #ababab;
+	background: #545454;
+	padding: 20px;
+	color: #fff;
+}
+#about{
+	height: 705px;
+	position: relative;
+	width: 100%;
+	z-index: 4;
+	top: 1010px;
+}
+#about .background{
+	position: absolute;
+	top: 10px;
+	left: -10px;
+	z-index: 5;
+}
+#about .bush{
+	position: absolute;
+	bottom: -120px;
+	left: -10px;
+	z-index: 400;
+	width: 200%;
+	height: 450px;
+	background: url(../images/bush.png);
+	background-repeat: repeat-x;
+}
+#about .bush1{
+	position: absolute;
+	bottom: -190px;
+	left: -50%;
+	z-index: 600;
+	width: 200%;
+	height: 450px;
+	background: url(../images/bush.png);
+	background-repeat: repeat-x;
+}
+#audio-info{
+	position: absolute;
+	top: 30px;
+	left: 10px;
+	z-index: 10000000;
+	font-size: 90px;
+}
+.white-background{
+    background: none repeat scroll 0 0 #fff;
+    height: 70px;
+    top: -70px;
+    width: 100%;
+    z-index: 10;
+    position: absolute;
+}
+#about .soil{
+	background: url(../images/roots.png);
+	position: absolute;
+	bottom: -120px;
+	z-index: 100;
+	height: 414px;
+	width: 100%;
+}
+#about .canopy{
+	position: absolute;
+	top: -900px;
+	z-index: 100;
+}
+#about .canopy1{
+	background: url(../images/canopy-layout.png);
+	background-size: 400px 400px;
+	background-repeat: repeat-x;
+	position: absolute;
+	top: -240px;
+	left: -20%;
+	z-index: 400;
+	width: 200%;
+	height: 405px;
+}
+#about .canopy2{
+	background: url(../images/canopy-layout.png);
+	background-size: 400px 400px;
+	background-repeat: repeat-x;
+	position: absolute;
+	top: -260px;
+	left: -60%;
+	z-index: 450;
+	width: 200%;
+	height: 325px;
+}
+#about .rain{
+	background: url(../images/wet-glass.png);
+	position: absolute;
+	top: 0px;
+	left: -50%;
+	width: 200%;
+	height: 800px;
+	z-index: 300;
+}
+.airplane{
+	top: 200px;
+	left: 700px;
+	position: absolute;
+	z-index: 500;
+}
+#rainforest-canopy{
+	position: absolute;
+	top: -1200px;
+	z-index: 99;
+	width: 100%;
+}
+#canopy-tree{
+	top: -1400px;
+	left: -15%;
+	position: absolute;
+	width: 200%;
+	height: 550px;
+	background: url(../images/canopy-layout.png);
+	background-size: 30%;
+	z-index: 350;
+}
+#canopy-tree1{
+	top: -1400px;
+	left: -70%;
+	position: absolute;
+	width: 250%;
+	height: 350px;
+	background: url(../images/canopy-layout.png);
+	z-index: 300;
+}
+#canopy-tree2{
+	position: absolute;
+	top: -360px;
+	z-index: 500;
+	left: 150px;
+}
+#canopy-tree3{
+	position: absolute;
+	top: -760px;
+	z-index: 560;
+	left: 400px;
+}
+#canopy-tree4{
+	position: absolute;
+	top: -560px;
+	z-index: 660;
+	left: 700px;
+}
+#canopy-pines{
+	position: absolute;
+	top: -1860px;
+	z-index: 660;
+	left: 700px;
+}
+#canopy-pines1{
+	position: absolute;
+	top: -560px;
+	z-index: 660;
+	left: 10px;
+}
+#about-text{
+	background: rgba(255,255,255,.8);
+	position: absolute;
+	top: 100px;
+	right: 200px;
+	width: 500px;
+	height: 300px;
+	z-index: 100;
+	border-radius: 10px;
+	padding: 10px;
+	box-shadow: 0px 5px 35px rgba(0,0,0,.8);
+	border: 5px solid #fff;
+}
+#about-text h2{
+	margin: 0px;
+	margin-bottom: -10px;
+}
+#panther{
+	position: absolute;
+	bottom: 140px;
+	left: 140px;
+	z-index: 400;
+}
+#icons{
+	background: rgba(255,255,255,.5);
+	padding: 10px;
+	position: absolute;
+	top: 100px;
+	right: 50px;
+	width: 600px;
+}
+#icons div > div{
+	display: block;
+	float: left;
+	padding: 10px;
+	background: #000;
+	margin: 5px;
+	width: 70px;
+	height: 70px;
+}
+#image-holder{
+	float: left;
+	width: 320px;
+}
+#text-holder{
+	float: left;
+	width: 230px;
+}

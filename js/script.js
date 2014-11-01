@@ -46,6 +46,8 @@ $(document).ready(function(){
 			// left - this is the left position used for the parallax animation
 			var top = parseInt($(this).css('top').replace('px',''));
 			var left = parseInt($(this).css('left').replace('px',''));
+			var width = parseInt($(this).css('width').replace('px',''));
+			var height = parseInt($(this).css('height').replace('px',''));
 			
 			// used to catch non-declared variables required for proper parallax animation
 			if(top == 'auto' || isNaN(top)){
@@ -66,6 +68,8 @@ $(document).ready(function(){
 				'depth': $(this).css('z-index'),
 				'x':parseInt(left),
 				'y':parseInt(top),
+				'width': parseInt(width),
+				'height': parseInt(height),
 				'offsetx':$(this).offset().left,
 				'offsety':$(this).offset().top,
 				'percents': {'x':parseInt($(this).css('left').replace('px',''))/mainholder.width(),
@@ -180,9 +184,19 @@ $(document).ready(function(){
 	    			var data = info.data('info')[i];
 	    			var offset = info.offset();
 	    			var position = (data.y)+((offset.top-top)*data.depth/1000);
+	    			if(data.object.attr('class').search(/zoom/i) != -1){
+	    				data.object.find('img').each(function(){
+	    					$(this).css('width','100%');
+	    				});
+	    				data.object.css('width', (-1*offset.top+top+data.width));
+	    			}
 	    			data.object.css('top', position);
 	    		}
 	    	})
+	    }
+	    
+	    function animate(obj,info){
+	    	
 	    }
 	    
 	    /*
