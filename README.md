@@ -1,4 +1,4 @@
-<h1>Mondo Autmated Parallaxing</h1>
+<h1>Mondo Automated Parallaxing</h1>
 Parallaxing script which allows for several different automated options for the parallaxing screen.
 
 Used in conjunction with jquery, you can make as many parallaxing effects on your screen whenever you'd like.  The only limitation to worry about are the type of effects you'd be interested in creating using this parallaxing script.
